@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0 50px;
+  z-index: 1;
+  background: transparent;
+}
+header h2 {
+  color: white;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-family: "Bugfast", sans-serif;
+  user-select: none;
+  cursor: pointer;
+}
+header h2 span {
+  color: black;
+  background-color: white;
+  padding: 4px 10px;
+}
+header ul {
+  display: flex;
+  list-style: none;
+}
+header ul li a {
+  margin-left: 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  font-family: "Renegade Pursuit", sans-serif;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+header ul li a:hover {
+  color: grey;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 10px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 35px 70px;
+  background-image: url(./images/heroBG.jpg);
+  background-position: center;
+  background-size: cover;
+}
+h1 {
+  color: white;
+  font-family: "Zasline", sans-serif;
+  font-size: 130px;
+  line-height: 80%;
+  letter-spacing: 8px;
+  font-weight: 400;
+}
+.hero p {
+  font-family: "Quahon", sans-serif;
+  font-size: 25px;
+  color: white;
+  margin: 0 0 20px 0;
+}
+.hero button {
+  height: 39px;
+  border-radius: 16px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: #3468c0;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.hero button svg {
+  transition: 0.4s ease-in-out;
+}
+.hero button:hover svg {
+  width: 30px;
+  height: 30px;
+  transition: 0.4s ease-in-out;
+}
+#about {
+  padding: 70px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#about p {
+  width: 550px;
+  padding: 50px;
+  font-family: "poppins", serif;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #3468c0;
+}
+#about p span {
+  font-size: 22px;
+  font-weight: 600;
+}
+#about img {
+  width: 500px;
+}
+.hobbies {
+  width: 100%;
+  padding: 70px;
+  background-color: #d9e5f8;
+}
+.hobbies h2 {
+  font-family: "zasline", serif;
+  font-size: 40px;
+  margin-left: 20px;
+}
+.hobbies > p {
+  font-family: "poppins", serif;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.image-container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.div5 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.div6 {
+  grid-area: 1 / 4 / 3 / 5;
+}
+.image-container div {
+  position: relative;
+  object-fit: fill;
+  cursor: pointer;
+}
+.image-container div p {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #3468c0;
+  position: absolute;
+  font-size: 22px;
+  font-family: "Quahon", serif;
+  color: white;
+  font-weight: 500;
+  left: 5%;
+  bottom: 20px;
+  z-index: 10;
+  width: 90%;
+  user-select: none;
+}
+.image-container div::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 0.4s ease-in-out;
+}
+.image-container div:hover:after {
+  background: rgba(0, 0, 0, 0.1);
+}
+.image-container div img {
+  width: 100%;
+  height: 100%;
+}
+footer {
+  width: 100%;
+  padding: 50px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 20px;
+}
+footer ul li {
+  font-size: 20px;
+  margin-right: 10px;
+  font-family: "Renegade Pursuit", sans-serif;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  color: black;
+}
+footer ul li:hover {
+  color: #3468c0;
+}
+footer h2 {
+  margin-bottom: 20px;
+  font-family: "zasline", serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+.socials {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
+  width: 100%;
+}
+.socials svg {
+  color: #3468c0;
+  transition: 0.4s ease-in-out;
+}
+.socials svg:hover {
+  color: #d9e5f8;
+}
+footer span {
+  border-top: 1px solid #3468c0;
+  width: 100%;
+  padding-top: 15px;
+  text-align: center;
+  font-family: "poppins", serif;
+  font-weight: 600;
+  letter-spacing: 10px;
+  color: grey;
+}
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 0px;
+    bottom: 0;
+    gap: 20px;
+    flex-direction: column;
+    background: white;
+    backdrop-filter: blur(3px);
+    width: 80%;
+    height: 100%;
+    padding: 30px 0;
+    margin: 0;
+    text-align: center;
+    transition: 0.7s;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+  .nav-link {
+    color: #000000;
+    text-shadow: none;
+    transition: 0.4s ease-in-out;
+    font-size: 20px;
+    margin: 0;
+  }
+  .nav-link:hover {
+    color: #3468c0;
+  }
+  header{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  header h2 {
+    font-size: 20px;
+  }
+  h1{
+    font-size: 55px;
+    letter-spacing: 0px;
+  }
+  .hero{
+    padding: 20px;
+  }
+  #about{
+    flex-direction: column-reverse;
+    padding: 20px 10px;
+  }
+  #about img{
+    width: 270px;
+  }
+  #about p{
+    width: 100%;
+    padding: 20px 15px;
+    margin-top: 30px;
+  }
+  .hobbies{
+    padding: 30px 10px;
+  }
+  .hobbies h2{
+    font-size: 25px;
+    margin-left: 5px;
+  }
+  .hobbies > p{
+    margin-left: 5px;
+    font-size: 15px;
+  }
+  .image-container{
+    display: block;
+  }
+  .image-container div{
+    margin-bottom: 15px;
+  }
+  footer{
+    padding: 20px 15px;
+  }
+}
